@@ -3,10 +3,20 @@ from pathlib import Path
 
 from prefect import flow, task
 
-from .config import BUCKET_BRONZE, BUCKET_SOURCES, get_minio_client
+try:
+    # when executed as part of package
+    from .config import BUCKET_BRONZE, BUCKET_SOURCES, get_minio_client
+except Exception:
+    # allow running the script directly: make flows importable
+    import sys
+    from pathlib import Path
+    repo_root = str(Path(__file__).resolve().parents[1])
+    if repo_root not in sys.path:
+        sys.path.insert(0, repo_root)
+    from flows.config import BUCKET_BRONZE, BUCKET_SOURCES, get_minio_client
 
 @task(name="upload_to_sources", retries=2)
-def upload_csv_to_souces(file_path: str, object_name: str) -> str:
+def upload_csv_to_sources(file_path: str, object_name: str) -> str:
     """
     Upload local CSV file to MinIO sources bucket.
 
@@ -22,7 +32,7 @@ def upload_csv_to_souces(file_path: str, object_name: str) -> str:
 
     if not client.bucket_exists(BUCKET_SOURCES):
         client.make_bucket(BUCKET_SOURCES)
-
+        
     client.fput_object(BUCKET_SOURCES, object_name, file_path)
     print(f"Uploaded {object_name} to {BUCKET_SOURCES}")
     return object_name
@@ -74,8 +84,8 @@ def bronze_ingestion_flow(data_dir: str = "./data/sources") -> dict:
     clients_file = str(data_path / "clients.csv")
     achats_file = str(data_path / "achats.csv")
 
-    clients_name = upload_csv_to_souces(clients_file, "clients.csv")
-    achats_name = upload_csv_to_souces(achats_file, "achats.csv")
+    clients_name = upload_csv_to_sources(clients_file, "clients.csv")
+    achats_name = upload_csv_to_sources(achats_file, "achats.csv")
 
     bronze_clients = copy_to_bronze_layer(clients_name)
     bronze_achats = copy_to_bronze_layer(achats_name)

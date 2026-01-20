@@ -1,0 +1,288 @@
+INFO:     Started server process [98825]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51824 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51826 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52006 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52008 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52010 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52046 - "GET /collections/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52048 - "GET /collections/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52050 - "GET /collections/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52052 - "GET /collections/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52054 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52082 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52252 - "GET /collections/monthly_revenue?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52331 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52333 - "GET /collections/monthly_revenue?limit=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52335 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52357 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52357 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52406 - "GET /collections/monthly_revenue?limit=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52460 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52468 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52491 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52505 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52505 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52511 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52557 - "GET /collections/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52559 - "GET /collections/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52561 - "GET /collections/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52563 - "GET /collections/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52565 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53001 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /metadata/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /metadata/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /metadata/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53111 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53111 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53111 - "GET /metadata/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53111 - "GET /metadata/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53111 - "GET /metadata/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53703 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53746 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53746 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53746 - "GET /metadata/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53746 - "GET /metadata/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53746 - "GET /metadata/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /metadata/monthly_revenue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /metadata/volumes_day HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /metadata/ca_by_country HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /metadata/volumes_month HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54680 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54725 - "GET /collections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54725 - "GET /metadata/monthly_revenue HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/app/api.py", line 72, in get_metadata
+    if filter_value.isdigit():
+                 ^^^^^^^^^^^^^
+TypeError: can't subtract offset-naive and offset-aware datetimes
+INFO:     127.0.0.1:54727 - "GET /metadata/volumes_day HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/app/api.py", line 72, in get_metadata
+    if filter_value.isdigit():
+                 ^^^^^^^^^^^^^
+TypeError: can't subtract offset-naive and offset-aware datetimes
+INFO:     127.0.0.1:54729 - "GET /metadata/ca_by_country HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/app/api.py", line 72, in get_metadata
+    if filter_value.isdigit():
+                 ^^^^^^^^^^^^^
+TypeError: can't subtract offset-naive and offset-aware datetimes
+INFO:     127.0.0.1:54731 - "GET /metadata/volumes_month HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/enzocosson/Documents/iim/big-data/tp1/app/api.py", line 72, in get_metadata
+    if filter_value.isdigit():
+                 ^^^^^^^^^^^^^
+TypeError: can't subtract offset-naive and offset-aware datetimes

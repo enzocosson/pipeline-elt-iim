@@ -26,20 +26,49 @@ st.set_page_config(
 )
 
 
+API_URL = os.environ.get("API_URL", "http://localhost:8000")
+
+
 @st.cache_data(ttl=300)
 def load_from_gold(object_name: str) -> pd.DataFrame:
-    """Charge prudemment un CSV depuis le bucket GOLD."""
+    """Charge un tableau depuis l'API (collection Mongo). Accepte `name` ou `name.csv`."""
+    import httpx
+
     try:
-        client = get_minio_client()
-        if not client.bucket_exists(BUCKET_GOLD):
-            return pd.DataFrame()
-        resp = client.get_object(BUCKET_GOLD, object_name)
-        data = resp.read()
-        resp.close()
-        resp.release_conn()
-        return pd.read_csv(BytesIO(data))
+        coll = object_name
+        if coll.endswith('.csv'):
+            coll = coll[:-4]
+        url = f"{API_URL}/collections/{coll}"
+        with httpx.Client(timeout=10) as client:
+            r = client.get(url)
+            if r.status_code != 200:
+                return pd.DataFrame()
+            data = r.json()
+            if not data:
+                return pd.DataFrame()
+            df = pd.DataFrame.from_records(data)
+            # remove _id if present
+            if '_id' in df.columns:
+                df = df.drop(columns=['_id'])
+            return df
     except Exception:
         return pd.DataFrame()
+
+
+def get_refresh_info(object_name: str) -> dict:
+    import httpx
+    try:
+        coll = object_name
+        if coll.endswith('.csv'):
+            coll = coll[:-4]
+        url = f"{API_URL}/metadata/{coll}"
+        with httpx.Client(timeout=5) as client:
+            r = client.get(url)
+            if r.status_code != 200:
+                return {}
+            return r.json()
+    except Exception:
+        return {}
 
 
 def safe_sum(df: pd.DataFrame, col: str) -> float:
@@ -58,6 +87,15 @@ def main():
         volumes_day = load_from_gold("volumes_day.csv")
         volumes_month = load_from_gold("volumes_month.csv")
         ca_by_country = load_from_gold("ca_by_country.csv")
+
+    # refresh metadata (via API)
+    monthly_meta = get_refresh_info("monthly_revenue.csv")
+    # monthly_meta keys: delta_source_to_ingest_seconds, delta_ingest_to_now_seconds
+    refresh_delta = None
+    ingest_age = None
+    if monthly_meta:
+        refresh_delta = monthly_meta.get("delta_source_to_ingest_seconds")
+        ingest_age = monthly_meta.get("delta_ingest_to_now_seconds")
 
     # KPIs
     ca_total = 0.0
@@ -115,6 +153,23 @@ def main():
         styled_metric('💵 Panier moyen', f"{panier_moyen:,.2f} €" if panier_moyen is not None else "N/A")
     with kcol4:
         styled_metric('📊 Croissance mensuelle', f"{taux_croissance:.2f} %" if taux_croissance is not None else "N/A")
+
+    # Afficher temps de refresh si disponible
+    if monthly_meta:
+        try:
+            rcol1, rcol2, _ = st.columns([1,1,2])
+            with rcol1:
+                if refresh_delta is not None:
+                    st.metric('⏱️ Temps source -> ingest (s)', f"{int(refresh_delta)}")
+                else:
+                    st.write('⏱️ Temps source -> ingest: N/A')
+            with rcol2:
+                if ingest_age is not None:
+                    st.metric('🕒 Âge de l\'ingestion (s)', f"{int(ingest_age)}")
+                else:
+                    st.write("🕒 Âge de l'ingestion: N/A")
+        except Exception:
+            pass
 
     st.markdown("---")
 

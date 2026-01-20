@@ -6,3 +6,8 @@ faker
 streamlit
 plotly
 python-dotenv
+fastapi
+uvicorn[standard]
+pymongo
+motor
+httpx

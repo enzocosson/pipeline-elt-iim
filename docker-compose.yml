@@ -55,6 +55,18 @@ services:
       timeout: 5s
       retries: 5
 
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_ENCRYPTION_SECRET_KEY: "please_change_me"
+    networks:
+      - elt-network
+    # Note: metabase can be configured to point to a remote MongoDB (Atlas).
+    # No local mongo dependency is enforced to allow using MONGODB_URI from .env
+
   prefect-server:
     image: prefecthq/prefect:3-python3.13
     container_name: prefect-server
